@@ -3,13 +3,13 @@ import { Col, Card, Button } from "react-bootstrap";
 
 const CardBerita = ({ brt }) => {
   return (
-    <Col md={4} xs={6}>
-      <Card className="margin" style={{ width: "18rem" }}>
-        <Card.Img variant="top" src={brt.urlToImage} />
+    <Col sm={3} md={4} xs={6}>
+      <Card className="margin" style={{ width: "21.8rem" }}>
+        <Card.Img className="cardimg" variant="top" src={brt.urlToImage} />
         <Card.Body>
-          <Card.Title>{brt.title}</Card.Title>
-          <Card.Text>{brt.description}</Card.Text>
-          <Button variant="primary" href={brt.url}>
+          <Card.Title className="cardtitle">{brt.title}</Card.Title>
+          <Card.Text className="cardtext">{brt.description}</Card.Text>
+          <Button className="buttonP" variant="primary" href={brt.url}>
             {brt.source.name}{" "}
           </Button>
         </Card.Body>
@@ -17,21 +17,5 @@ const CardBerita = ({ brt }) => {
     </Col>
   );
 };
-
-// const CardBerita = (props) => {
-//   return (
-//     <Container>
-//       <Row>
-//         <Col>
-//           <Row>
-//             {props.berita.map((brt, i) => (
-//               <CardItemBerita brt={brt} key={brt.title + i} />
-//             ))}
-//           </Row>
-//         </Col>
-//       </Row>
-//     </Container>
-//   );
-// };
 
 export default CardBerita;

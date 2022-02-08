@@ -18,11 +18,11 @@ class CariBerita extends React.Component {
 
   render() {
     return (
-      <div className="margin">
+      <div className="margin-cari">
         <Container>
           <Row className="justify-content-md-center">
             <Col sm={8}>
-              <Form onSubmit={this.handleSubmit}>
+              <Form onSubmit={this.handleSubmit} className="margin-search">
                 <InputGroup className="mb-3">
                   <FormControl aria-label="Recipient's username" aria-describedby="basic-addon2" placeholder="Ketik Topik Berita Disini" name="topic" value={this.state.cariTopik} onChange={this.handleChange} />
                   <Button variant="primary" id="button-addon2" type="submit">
